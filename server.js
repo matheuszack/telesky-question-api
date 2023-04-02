@@ -4,7 +4,8 @@ const conf = require('dotenv').config().parsed;
 const cors = require('cors'); // importa o módulo cors
 const app = express();
 
-const port = conf.HTTPPORT|| 6912;
+const port = process.env.HTTPPORT || 6912;
+
 
 app.use(cors())
 
